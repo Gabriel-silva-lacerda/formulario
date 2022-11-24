@@ -11,6 +11,7 @@ body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
     background-color: #fffffc;
+    overflow-y: hidden;
 }
 
 section {
