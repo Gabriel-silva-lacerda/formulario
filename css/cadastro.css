@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffffc;
+    /* background-image: linear-gradient(to right, ); */
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background-image: linear-gradient(to right, #743ad5, #d53a9d);
+    position: relative;
+}
+
+section::after {
+    content: "";
+    position: absolute;
+    bottom: 240px;
+    width: 90%;
+    height: 1px;
+    background-color: white;
+}
+
+form {
+    width: 350px;
+}
+
+section img {
+    width: 70px;
+    margin-bottom: 10px;
+}
+
+section h1 {
+    font-size: 2.5rem;
+    color: white;
+}
+
+
+form label, input, button {
+    display: block;
+}
+
+input {
+    border-radius: 2px;
+}
+
+form label[for="name"] {
+    margin-top: 20px;
+    margin-bottom: 2px;
+    color: white;
+}
+
+.container-name {
+    position: relative;
+}
+
+.icone {
+    position: absolute;
+    right: 5px;
+    top: 32px;
+}
+
+form label[for="email"] {
+    margin-bottom: 2px;
+    color: white;
+}
+
+.container-email {
+    position: relative;
+}
+
+form label[for="password"] {
+    margin-bottom: 2px;
+    color: white;
+}
+
+.container-passoword {
+    position: relative;
+}
+
+form input[type="text"], form input[type="password"], form input[type="email"] {
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 13px
+}
+
+button {
+    margin-top: 40px;
+    border: none;
+    border-radius: 2px;
+    background-color: white;
+    padding: 12px 50px;
+    color: #474646;
+    margin: 50px auto 15px auto;
+    cursor: pointer;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.11);
+}
+
+p {
+    text-align: center;
+    color: white;
+    margin-top: 70px;
+    margin-bottom: 10px;
+}
+
+.container img {
+    width: 25px;
+}
+
+#voltar {
+    width: 60px;
+    margin-top: 20px;
+}
+
+@media (max-width: 594px) {
+    section {
+        width: 100%;
+        min-width: 250px;
+    }
+
+    form {
+        width: 100%;
+    }
+}

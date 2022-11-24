@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fffffc;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 40px;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 2px;
+    background-color: white;
+}
+
+form {
+    width: 350px;
+}
+
+section img {
+    width: 35px;
+    margin-bottom: 10px;
+}
+
+section h1 {
+    font-size: 2.5rem;
+}
+
+section p {
+    color: #4a4a4d;
+}
+
+form label, input, button {
+    display: block;
+}
+
+#checkbox {
+    display: inline-block;
+    color: #373738;
+    cursor: pointer;
+}
+
+form label[for="name"] {
+    margin-top: 20px;
+    margin-bottom: 2px;
+    color: #373738;
+}
+
+.container-name {
+    position: relative;
+}
+
+.icone {
+    position: absolute;
+    right: 5px;
+    top: 31px;
+}
+
+form label[for="password"] {
+    margin-bottom: 2px;
+    color: #373738;
+}
+
+.container-passoword {
+    position: relative;
+}
+
+form input[type="text"], form input[type="password"] {
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: #f1f1f1;
+    padding: 10px
+}
+
+form input[type="text"]:focus, form input[type="password"]:focus {
+    border-bottom: 2px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(to right, #743ad5, #d53a9d);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.container a {
+    text-decoration: none;
+    color: blue;
+}
+
+.container a:hover {
+    text-decoration: underline;
+}
+
+button {
+    border: none;
+    border-radius: 2px;
+    background-color: #4d61fd;
+    padding: 12px 45px;
+    color: #f1f1f1;
+    margin: 50px auto 15px auto;
+    cursor: pointer;
+}
+
+p {
+    text-align: center; 
+}
+
+p a {
+    text-decoration: none;
+    color: blue;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+@media (max-width: 594px) {
+    section {
+        width: 80vw;
+        min-width: 250px;
+    }
+
+    form {
+        width: 100%;
+    }
+}
+
+@media (max-width: 422px) {
+    .container {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: center;
+    }
+
+    #checkbox {
+        margin-bottom: 20px;
+    }
+
+    button {
+        margin-top: 0;
+}
+} 
+
+
+
