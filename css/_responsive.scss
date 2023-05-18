@@ -1,0 +1,55 @@
+@media (max-width: 650px) {
+.container {
+    min-height: 650px;
+    width: 350px;
+    .flex-center {
+        padding: 0px 20px;
+    }
+    .form-enter, .content-rigth {
+        left: 0;
+        height: 50%;
+        width: 100%;
+        @include borderTop();
+        border-bottom-left-radius: 0px; 
+    }
+    .form-sign-up, .content-left {
+        height: 50%;
+        bottom: 0;
+        width: 100%;
+        @include borderBottom();
+        border-top-right-radius: 0px;
+    }
+
+    .content-left {
+        left: 0;
+        @include borderTop();
+        border-bottom-left-radius: 0px; 
+        border-bottom-right-radius: 0px;
+    }
+
+    .content-rigth {
+        @include borderBottom();
+    }
+
+    .account-text {
+        display: none;
+    }
+
+    .animation {
+        transform:  translateY(50%);
+        }
+    
+        .animation-two {
+        transform:  translateY(-50%);
+            
+        }
+    
+    .animation-third {
+        transform:  translateY(-100%);
+    }
+    
+    .animation-fourth {
+        transform:  translateY(100%);
+    }
+}
+}

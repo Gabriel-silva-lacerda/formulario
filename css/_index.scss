@@ -1,0 +1,231 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    @include flexCenter();
+    background-color: $third-color;
+    padding: 0px 20px;
+}
+
+.container {
+    background-color: $third-color;
+    position: relative;
+    width: 768px;
+	max-width: 100%;
+	min-height: 480px;
+    background-color: $fourth-color;
+    border-radius: 10px;
+
+    // Form position
+    .form-enter {
+        background-color: $fourth-color;
+        left: 10;
+        position: absolute;
+        z-index: 1;
+        @include borderLeft();
+        
+        .forgot-password {
+            font-size: .9rem;
+        } 
+    }
+
+    .form-sign-up {
+        background-color: $primary-color;
+        right: 0;
+        position: absolute;
+        z-index: 1;
+        @include borderRight();
+        
+    }
+
+    .content-left {
+        background-color: $primary-color;
+        left: 50%;
+        @include borderLeft();
+        opacity: 0;
+    }
+
+    .content-rigth {
+        right: 50%;
+        background-color: $fourth-color;
+        @include borderRight();
+        opacity: 0;
+        input {
+            margin-bottom: 5px;
+        }
+    }
+
+    // Code reuse
+    .form-transition {
+        position: absolute;
+        width: 50%;
+        height: 100%;
+        transition: all .8s ease-in-out;
+    }
+
+    .flex-center {
+        @include flexCenterColunm();
+    }
+
+    .icon-container {
+        @include flexCenter();
+        gap: 10px;
+        margin: 10px 0px;
+        i {
+            background-color: $secudary-color;
+            border-radius: 50%;
+            color: $fifth-color;
+        }
+        i:hover {
+            background-color: $Sixth-color;
+            transition: .3s;
+        }
+    }
+    
+    a {
+        color: rgb(99, 99, 185);
+        text-decoration: none;
+    }
+
+    a:hover {
+        color:  rgb(42, 42, 202);
+    }
+
+    .face {
+        padding: 10px 15px;
+    }
+
+    .google {
+        padding: 10px;
+    }
+
+    .linkedin {
+        padding: 10px 12px;
+    }
+
+    .text-information {
+        margin: 25px 0px;
+        font-size: .9rem;
+    }
+
+    .account-text {
+        margin-top: 10px;
+        font-size: .8rem;
+    }
+
+    .error {
+        text-align: left;
+        margin-top: 10px;
+        padding: 0px 10px;
+        font-size: .8rem;
+        color: red;
+        font-weight: bold;
+        display: block;
+    }
+
+    .validation-email,
+    .validation-password,
+    .validation-name,
+    .validation-email-login,
+    .validation-password-login {
+        display: none;
+    }
+
+    // Input styling
+    input {
+        display: block;
+        padding: 10px 10px;
+        width: 100%;
+        border: none;
+        border-bottom: 2px solid $primary-color;
+        outline: 0;
+    }
+
+    input:focus {
+        border-bottom: 2px solid #602ff3;
+    }
+
+    input::placeholder {
+        color: rgb(150, 150, 150);
+        font-size: .8rem;
+    }
+
+    .input-content{
+        position: relative;
+        .fa-eye, .fa-eye-slash{
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            cursor: pointer;
+        }    
+        .fa-eye-slash{ 
+            display: none;
+        }
+        .eye, .eye-slash {
+            bottom: 13px;
+        }
+    }
+
+    // Form styling
+    .fa-eye.ativo {
+        display: block;
+    }
+
+    .account-text, .forgot-password {
+        display: block;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .forgot-password {
+        margin-top: 15px;
+    }
+
+    .input-password-login {
+        margin-top: 10px;
+    }
+
+    .btn {
+        cursor: pointer;
+        padding: 10px 0px;
+        border-radius: 30px;
+        border: none;
+        background: $secudary-color;
+        width: 55%;
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: 1px;
+    }
+
+    .subscribe-btn {
+        margin-top: 10px;
+    }
+
+    .btn:hover {
+        background-color:  $Sixth-color;
+        transition: .3s ;
+    }
+
+    // Animations
+    .animation {
+        transform:  translateX(50%);
+     }
+
+     .animation-two {
+        transform:  translateX(-50%);
+         
+     }
+
+    .animation-third {
+        transform:  translateX(-100%);
+    }
+
+    .animation-fourth {
+        transform:  translateX(100%);
+    }
+}
