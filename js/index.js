@@ -1,31 +1,27 @@
-// Variables transitions
+// Variable transitions
 const formEnter = document.querySelector(".form-enter");
 const formSignUp = document.querySelector(".form-sign-up");
 const contentLeft = document.querySelector(".content-left");
 const contentRigth = document.querySelector(".content-rigth");
 
-// Variables icons
+// Variable icons
 const iconEyeLogin = document.querySelector(".fa-eye");
 const iconEyeSlashLogin = document.querySelector(".fa-eye-slash");
 const iconEye = document.querySelector(".eye");
 const iconEyeSlash = document.querySelector(".eye-slash");
 
-// Variables form validation
+// Variable form validation
 const inputEmailLogin = document.querySelector(".input-email-login");
 const inputPasswordLogin = document.querySelector(".input-password-login");
 const validationEmailLogin = document.querySelector(".validation-email-login");
 const validationPasswordLogin = document.querySelector(
   ".validation-password-login"
 );
-
 const inputPassword = document.querySelector(".password");
 const inputEmail = document.querySelector(".email");
 const inputName = document.querySelector(".name");
 
-const validationEmail = document.querySelector(".validation-email");
-const validationPassword = document.querySelector(".validation-password");
-const validationName = document.querySelector(".validation-name");
-
+// Variable buttons
 const subscribeBtn = document.querySelector(".subscribe-btn");
 const btnToEnter = document.querySelector(".btn-to-enter");
 
@@ -97,8 +93,6 @@ const removeShowPassword = () => {
 // Form validation
 const inputValidationLoginEmail = () => {
   const validationLogin = inputEmailLogin.value.trim().length > 0;
-  const emailRegex =
-    /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
   if (validationLogin) {
     validationEmailLogin.classList.remove("error");
@@ -125,11 +119,9 @@ const inputValidationEmail = () => {
   const emailRegex =
     /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
   if (inputEmail.value.match(emailRegex)) {
-    validationEmail.classList.remove("error");
-    validationEmail.classList.add("validation-email");
+    inputEmail.style.borderBottom = "2px solid #8758ff";
   } else {
-    validationEmail.classList.add("error");
-    validationEmail.classList.remove("validation-email");
+    inputEmail.style.borderBottom = "2px solid red";
   }
 };
 
@@ -138,22 +130,18 @@ const inputValidationPasswrod = () => {
     "^(((?=.*[a-z])(?=.*[A-Z]))|((?=.*[a-z])(?=.*[0-9]))|((?=.*[A-Z])(?=.*[0-9])))(?=.{6,})"
   );
   if (inputPassword.value.match(mediumRegex)) {
-    validationPassword.classList.remove("error");
-    validationPassword.classList.add("validation-password");
+    inputPassword.style.borderBottom = "2px solid #8758ff";
   } else {
-    validationPassword.classList.add("error");
-    validationPassword.classList.remove("validation-password");
+    inputPassword.style.borderBottom = "2px solid red";
   }
 };
 
 const inputValidationName = () => {
   const regName = /^[a-zA-Z ]+ [a-zA-Z ]+$/;
   if (inputName.value.match(regName)) {
-    validationName.classList.remove("error");
-    validationName.classList.add("validation-name");
+    inputName.style.borderBottom = "2px solid #8758ff";
   } else {
-    validationName.classList.add("error");
-    validationName.classList.remove("validation-name");
+    inputName.style.borderBottom = "2px solid red";
   }
 };
 

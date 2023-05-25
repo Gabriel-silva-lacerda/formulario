@@ -122,9 +122,6 @@ body {
   font-weight: bold;
   display: block;
 }
-.container .validation-email,
-.container .validation-password,
-.container .validation-name,
 .container .validation-email-login,
 .container .validation-password-login {
   display: none;
